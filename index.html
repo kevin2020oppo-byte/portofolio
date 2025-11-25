@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin | Web Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body { scroll-behavior: smooth; }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0caab8, #0d0d0e);
+            color: white;
+        }
+
+        .btn-main {
+            background: #46888e;
+            color: #000;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: 0.3s;
+            border: none;
+        }
+        .btn-main:hover {
+            filter: brightness(0.9);
+        }
+
+        .skill-box {
+            transition: 0.3s;
+        }
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .card {
+            transition: 0.3s;
+            border-radius: 15px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .navbar{
+         background: linear-gradient(135deg, #060606, #1f5b62);    
+        }
+
+        /* Dark mode */
+        .dark-mode {
+            background: #121212 !important;
+            color: #f1f1f1 !important;
+        }
+        .dark-mode .navbar {
+            background: #000 !important;
+        }
+        .dark-mode .bg-white {
+            background: #1f1f1f !important;
+        }
+        .dark-mode .card {
+            background: #1f1f1f !important;
+            color: #f1f1f1;
+        }
+        .dark-mode .hero-bg {
+            background: linear-gradient(135deg, #000000, #343a40);
+        }
+        .dark-mode .btn-main {
+            background: #0dbdfd;
+            color: #fff;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#hero">Kevin Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-sm btn-outline-light" onclick="toggleDarkMode()">
+                            🌙 / ☀️
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="py-5 text-center hero-bg">
+        <div class="container fade-in">
+            <h1 class="fw-bold">Halo, Saya Kevin </h1>
+            <p class="lead mt-3 fw-semibold">
+                Mahasiswa IT & Web Developer yang fokus pada HTML, CSS, Bootstrap, JavaScript, PHP, dan MySQL.
+            </p>
+            <p class="mt-2">
+                Saya biasa membuat landing page, sistem CRUD (seperti buku tamu), dan dashboard sederhana.
+            </p>
+            <a href="#projects" class="btn btn-main mt-3 me-2">Lihat Project</a>
+            <a href="#contact" class="btn btn-outline-light mt-3">Hubungi Saya</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="py-5 bg-white" id="about">
+        <div class="container text-center fade-in">
+            <img src="kevin.jpg" class="rounded-circle mb-3 shadow" alt="kevin">
+            <h2 class="fw-bold">Tentang Saya</h2>
+            <p class="mt-3 mx-auto" style="max-width:650px;">
+                Saya Kevin, mahasiswa IT yang tinggal di Batam dan fokus pada pengembangan website.
+                Saya senang membangun website yang rapi, responsif, dan mudah digunakan.
+                Saat ini saya sudah mengerjakan project sistem buku tamu (CRUD + dashboard) dan beberapa halaman landing page.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="py-5" id="skills">
+        <div class="container fade-in">
+            <h2 class="fw-bold mb-4 text-center">Keahlian</h2>
+            <div class="row text-center g-3 justify-content-center">
+                <div class="col-6 col-md-2">
+                    <div class="p-3 bg-light rounded skill-box">HTML</div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="p-3 bg-light rounded skill-box">CSS</div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="p-3 bg-light rounded skill-box">Bootstrap</div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="p-3 bg-light rounded skill-box">JavaScript</div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="p-3 bg-light rounded skill-box">PHP</div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="p-3 bg-light rounded skill-box">MySQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container fade-in">
+            <h2 class="fw-bold mb-4 text-center">Layanan Saya</h2>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Landing Page Bootstrap</h5>
+                            <p class="card-text">
+                                Pembuatan landing page modern dan responsif untuk bisnis, portofolio, atau campaign Anda.
+                            </p>
+                            <ul class="small">
+                                <li>Desain rapi & mobile-friendly</li>
+                                <li>HTML + Bootstrap + JS</li>
+                                <li>Revisi ringan gratis</li>
+                            </ul>
+                            <p class="fw-semibold mb-0">Mulai dari: 200.000</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Perbaikan Bug & Tampilan</h5>
+                            <p class="card-text">
+                                Fix error pada HTML, CSS, Bootstrap, atau PHP di website Anda.
+                            </p>
+                            <ul class="small">
+                                <li>Layout berantakan diperbaiki</li>
+                                <li>Form tidak jalan / error</li>
+                                <li>Perbaikan cepat & jelas</li>
+                            </ul>
+                            <p class="fw-semibold mb-0">Mulai dari: 50.000</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sistem CRUD Sederhana</h5>
+                            <p class="card-text">
+                                Pembuatan sistem input data sederhana seperti buku tamu, data pengunjung, atau data lainnya.
+                            </p>
+                            <ul class="small">
+                                <li>Input, tampil, edit, hapus data</li>
+                                <li>Dashboard sederhana</li>
+                                <li>PHP + MySQL + Bootstrap</li>
+                            </ul>
+                            <p class="fw-semibold mb-0">Mulai dari: 300.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-5">
+        <div class="container fade-in">
+            <h2 class="fw-bold mb-4 text-center">Project Saya</h2>
+
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sistem Buku Tamu Digital</h5>
+                            <p class="card-text">
+                                Aplikasi buku tamu dengan CRUD lengkap (tambah, tampil, edit, hapus) terhubung ke database MySQL.
+                                Menggunakan PHP Native + Bootstrap.
+                            </p>
+                            <span class="badge bg-primary">PHP</span>
+                            <span class="badge bg-success">MySQL</span>
+                            <span class="badge bg-dark">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Landing Page UMKM</h5>
+                            <p class="card-text">
+                                Landing page responsif untuk usaha kecil menampilkan produk, deskripsi usaha, dan tombol kontak WhatsApp.
+                            </p>
+                            <span class="badge bg-dark">Bootstrap</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Portfolio Pribadi</h5>
+                            <p class="card-text">
+                                Website portofolio pribadi untuk menampilkan profil, skill, project, dan kontak.
+                            </p>
+                            <span class="badge bg-secondary">HTML</span>
+                            <span class="badge bg-dark">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 bg-white text-center">
+        <div class="container fade-in">
+            <h2 class="fw-bold">Kontak Saya</h2>
+            <p class="mt-3 mb-4">
+                Tertarik bekerja sama atau butuh bantuan pembuatan/perbaikan website?<br>
+                Silakan hubungi saya melalui WhatsApp atau email.
+            </p>
+            <!-- GANTI NOMOR DI SINI -->
+            <a href="https://wa.me/6282268747247?text=Halo%20Kevin,%20saya%20tertarik%20dengan%20jasa%20website%20Anda" class="btn btn-success px-4 me-2">
+                WhatsApp
+            </a>
+            <a href="mailto:kevin2020oppo@gmai.com" class="btn btn-outline-secondary px-4">
+                Email
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <small>© 2025 Kevin — Web Developer | Dibuat dengan Bootstrap 5</small>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer){
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
+</body>
+</html>
